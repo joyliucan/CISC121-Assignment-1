@@ -1,0 +1,10 @@
+FUNCTION solution(A)
+    n = length(A)
+    seen = array with length(A)
+    FOR i in A
+        IF i > n or i < 1
+            return 0
+        IF seen[i] = True
+            return 0
+        seen[i] = True
+    return 1
