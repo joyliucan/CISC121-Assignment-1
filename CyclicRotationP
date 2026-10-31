@@ -1,0 +1,8 @@
+Cyclic Rotation
+FUNCTION solution(A, K)
+  IF k = 0
+        return A
+  n = length(A)
+  left = A[0 to n-k]
+  right = A[n-k to n]
+  return right + left 
