@@ -1,0 +1,9 @@
+PermMissingElem
+FUNCTION solution(A)
+    n = length(A)
+    total_nums = n + 1
+    sum = (total_nums * (total_nums + 1) // 2)
+    actual_sum = 0
+    FOR element in A
+        actual_sum = actual_sum + element
+    return (sum - actual_sum)
