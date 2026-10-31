@@ -1,0 +1,15 @@
+FUNCTION solution(A)
+    total_sum = 0
+    FOR element in A
+        total_sum = total_sum + element
+    left_sum = A[0]
+    right_sum = total_sum - A[0]
+    min = ABS(right_sum - left_sum)
+    n = length(A)
+    FOR i in (1, n-1)
+        left_sum = left_sum + A[i]
+        right_sum = right_sum - A[i]
+        diff = ABS(right_sum - left_sum)
+        IF diff < min
+            min = diff
+    return min
