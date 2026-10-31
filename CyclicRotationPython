@@ -1,0 +1,8 @@
+def solution(A, K):
+  if K == 0:
+    return A
+  n = len(A)
+  left = A[:n - K:] # from the beginning to the |k|th index
+  right = A[n - K: n:] # from the |k|th index to the end
+  return right + left
+print(solution([3, 8, 9, 7, 6], 3))
