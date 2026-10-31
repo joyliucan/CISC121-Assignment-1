@@ -1,0 +1,11 @@
+def solution(A):
+  n = len(A)
+  total_nums = n + 1
+  sum = (total_nums * (total_nums + 1) // 2) # sum formula of consecutive numbers n*(n+1)/2
+  actual_sum = 0
+
+
+  for element in A:
+    actual_sum += element
+  return (sum - actual_sum) # the difference between the expected sum and actual sum is the missing number
+print(solution([3, 8, 1, 10, 5, 2, 9, 4, 6]))
