@@ -1,0 +1,8 @@
+FUNCTION solution(X, Y, D)
+   IF X >= Y or D = 0
+        return 0
+  space = Y - X
+  IF (space MOD D) = 0
+    return space DIV D
+  ELSE
+    return (space DIV D) + 1
