@@ -1,4 +1,3 @@
-PermMissingElem
 FUNCTION solution(A)
     n = length(A)
     total_nums = n + 1
