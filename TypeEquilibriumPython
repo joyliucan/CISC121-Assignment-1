@@ -1,0 +1,23 @@
+def solution(A):
+  total_sum = 0
+  n = len(A)
+
+  if n <= 1: # if array has 1 element, split isnt possible
+    return 0
+
+  for element in A:
+    total_sum += element
+
+  left_sum = A[0] # left array starts with first element
+  right_sum = total_sum - A[0] # right array is everything else
+  min = abs(right_sum - left_sum) # original minimum
+
+  for i in range(1, n):
+    left_sum += A[i] # add one more element to left
+    right_sum -= A[i] # remove one more element from right
+    diff = abs(right_sum - left_sum)
+
+    if diff < min: # find a smaller diff
+      min = diff
+  return min
+print(solution([35, 8, 324, 135, 72, 784, 346, 987, 65, 746, 938, 234]))
