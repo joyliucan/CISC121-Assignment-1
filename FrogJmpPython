@@ -1,0 +1,9 @@
+def solution(X, Y, D):
+  if X >= Y or D <= 0: 
+    return 0
+  space = Y - X
+  if space % D == 0: # if the distance is an exact multiple of jump distance
+    return space // D # exact number of jumps needed
+  else:
+    return ((space // D) + 1) #otherwise, add one more jump
+print(solution(10, 110, 30))
